@@ -14,17 +14,6 @@ const whatDayIsToday = () => {
 
 whatDayIsToday()
 
-// function whatDayIsToday() {
-//     var today = new Date()
-//     var day = today.getDay()
-//     var dayOfWeek = ["dimanche", "lundi", "mardi", "mercredi", "jeudi", "vendredi", "samedi"]
-    
-//     console.log("Aujourd'hui nous sommes " + dayOfWeek[day])
-// console.log(`Aujourd'hui nous sommes ${day}`)
-// }
-
-// whatDayIsToday()
-
 console.log("")
 // ## 02 - Mois courant
 
@@ -93,9 +82,39 @@ calculateAge("2000-04-03")
 // - A l'aide du package `moment` 
 // et en regardant sa [documentation](https://momentjs.com/) sur internet, refaites tous les exercices
 
-const whatDayIsTodayWithMoment = () => {
+var moment = require('moment')
+moment.locale("fr")
 
-    console.log(`Aujourd'hui nous sommes ${dayOfWeek[day]}`)
+console.log("Bonus 01")
+
+const whatDayIsTodayWithMoment = () => {
+    console.log(moment().format("[Aujourd'hui on est] dddd"))
 }
 
-whatDayIsToday()
+whatDayIsTodayWithMoment()
+
+console.log("Bonus 02")
+
+const whatMonthIsItWithMoment = () => {
+    console.log(moment().format("[Nous sommes au mois de] MMMM"))
+}
+
+whatMonthIsItWithMoment()
+
+console.log("Bonus 03")
+
+const formatDateWithMoment = (str) => {
+    console.log(moment().format("DD[/]MM[/]YYYY"))
+}
+
+formatDateWithMoment()
+
+console.log("Bonus 04")
+
+const calculateAgeWithMoment = (str) => {
+    const age = moment().diff(moment(str), "years")
+    console.log(moment.duration(age, "years").humanize())
+}
+
+calculateAgeWithMoment("2000-01-01")
+calculateAgeWithMoment("2000-04-03")
