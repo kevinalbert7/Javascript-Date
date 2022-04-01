@@ -5,9 +5,9 @@
 console.log("01")
 
 const whatDayIsToday = () => {
+    const dayOfWeek = ["dimanche", "lundi", "mardi", "mercredi", "jeudi", "vendredi", "samedi"]
     const date = new Date()
     const day = date.getDay()
-    const dayOfWeek = ["dimanche", "lundi", "mardi", "mercredi", "jeudi", "vendredi", "samedi"]
 
     console.log(`Aujourd'hui nous sommes ${dayOfWeek[day]}`)
 }
@@ -33,9 +33,9 @@ console.log("")
 console.log("02")
 
 const whatMonthIsIt = () => {
+    const monthArray = ["Janvier", "Février", "Mars", "Avril", "Mai", "Juin", "Juillet", "Aout", "Septembre", "Octobre", "Novembre", "Décembre"]
     const today = new Date()
     const month = today.getMonth()
-    const monthArray = ["Janvier", "Février", "Mars", "Avril", "Mai", "Juin", "Juillet", "Aout", "Septembre", "Octobre", "Novembre", "Décembre"]
 
     switch (monthArray[month]) {
         case "Avril":
@@ -53,16 +53,6 @@ const whatMonthIsIt = () => {
 }
 
 whatMonthIsIt()
-
-// function whatMonthIsIt() {
-//     var today = new Date()
-//     var month = today.getMonth()
-//     var monthOfYear = ["janvier", "février", "mars", "avril", "mai", "juin", "juillet", "aout", "septembre", "octobre", "novembre", "decembre"]
-    
-//     console.log("Nous sommes le mois d'" + monthOfYear[month])
-// }
-// whatMonthIsIt()
-
 
 console.log("")
 // ## 03- Format
@@ -89,46 +79,23 @@ console.log("04")
 // - La fonction doit calculer l'âge de la personne (en années) née a ce moment là, en fonction de la date d'aujourd'hui
 // - Appelez la fonction et affichez son résultat dans la console
 
+const calculateAge = (str) => {
+    const age = new Date(new Date() - new Date(str))
 
+    console.log(age.getFullYear() - 1970)
+}
 
-
-// function calculateAge() {
-//     var today = new Date()
-    
-//     console.log("Nous sommes le : ", today)
-//     var birth = new Date("1988-09-17")
-//     console.log("ma date de naissance est le : ", birth)
-//     var age = new Date(today) - new Date(birth)
-
-
-
-
-
-//     var dayBirth = 17
-//     var monthBirth = 09
-//     var yearBirth = 1988 
-    
-
-
-//     var age = (new Date() - new Date("1988-09-17")) - date.getTime()
-    
-//     console.log("mon age est : ", age)
-// }
-// calculateAge()
-// console.log("")
-// console.log("")
-
-// function calculateAge(date) { 
-//     var today = new Date()
-//     console.log("today  is : ", today)
-//     var diff = Date.now() - date.getTime();
-//     var age = new Date(diff); 
-//     return age.getFullYear() - 1970
-//     return Math.abs(age.getUTCFullYear() - 1970);
-// }
-// console.log(calculateAge(new Date(1988, 09, 17)))
+calculateAge("2000-01-01")
+calculateAge("2000-04-03")
 
 //## ⭐ Bonus
 
 // - A l'aide du package `moment` 
 // et en regardant sa [documentation](https://momentjs.com/) sur internet, refaites tous les exercices
+
+const whatDayIsTodayWithMoment = () => {
+
+    console.log(`Aujourd'hui nous sommes ${dayOfWeek[day]}`)
+}
+
+whatDayIsToday()
