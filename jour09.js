@@ -4,32 +4,54 @@
 // - La fonction devra afficher "Aujourd'hui nous sommes xxx" avec le nom du jour à la place de xxx
 console.log("01")
 
-function whatDayIsToday() {
-    var today = new Date()
-    var day = today.getDay()
-    var dayOfWeek = ["dimanche", "lundi", "mardi", "mercredi", "jeudi", "vendredi", "samedi"]
-    console.log("Aujourd'hui nous sommes " + dayOfWeek[day])
+const whatDayIsToday = () => {
+    const date = new Date()
+    const day = date.getDay()
+    const dayOfWeek = ["dimanche", "lundi", "mardi", "mercredi", "jeudi", "vendredi", "samedi"]
 
+    console.log(`Aujourd'hui nous sommes ${dayOfWeek[day]}`)
 }
-whatDayIsToday()
-console.log("")
 
+whatDayIsToday()
+
+// function whatDayIsToday() {
+//     var today = new Date()
+//     var day = today.getDay()
+//     var dayOfWeek = ["dimanche", "lundi", "mardi", "mercredi", "jeudi", "vendredi", "samedi"]
+    
+//     console.log("Aujourd'hui nous sommes " + dayOfWeek[day])
+// console.log(`Aujourd'hui nous sommes ${day}`)
+// }
+
+// whatDayIsToday()
+
+console.log("")
 // ## 02 - Mois courant
 
 // - Créer une fonction `whatMonthIsIt`
 // - La fonction devra afficher "Nous sommes au mois de xxx" avec le nom du mois à la place de xxx
 console.log("02")
 
-function whatMonthIsIt() {
-    var today = new Date()
-    var month = today.getMonth()
-    var monthOfYear = ["janvier", "février", "mars", "avril", "mai", "juin", "juillet", "aout", "septembre", "octobre", "novembre", "decembre"]
-    console.log("Nous sommes le mois d'" + monthOfYear[month])
+const whatMonthIsIt = () => {
+    
 }
-whatMonthIsIt()
-console.log("")
-console.log("")
 
+
+
+
+
+
+// function whatMonthIsIt() {
+//     var today = new Date()
+//     var month = today.getMonth()
+//     var monthOfYear = ["janvier", "février", "mars", "avril", "mai", "juin", "juillet", "aout", "septembre", "octobre", "novembre", "decembre"]
+    
+//     console.log("Nous sommes le mois d'" + monthOfYear[month])
+// }
+// whatMonthIsIt()
+
+
+console.log("")
 // ## 03- Format
 console.log("03")
 
@@ -38,17 +60,17 @@ console.log("03")
 // - Appelez la fonction et affichez son résultat dans la console
 
 
-function formatDate() {
-    var today = new Date()
-    var todayFr = today.toLocaleDateString()
+// function formatDate() {
+//     var today = new Date()
+//     var todayFr = today.toLocaleDateString()
  
-    console.log("Nous sommes le : ", todayFr)
-}
+//     console.log("Nous sommes le : ", todayFr)
+// }
 
-formatDate()
-console.log("")
-console.log("")
+// formatDate()
 
+
+console.log("")
 // ## 04 - Age
 console.log("04")
 
@@ -57,23 +79,31 @@ console.log("04")
 // - La fonction doit calculer l'âge de la personne (en années) née a ce moment là, en fonction de la date d'aujourd'hui
 // - Appelez la fonction et affichez son résultat dans la console
 
-function calculateAge() {
-    var today = new Date()
-    console.log("Nous sommes le : ", today)
-    var birth = new Date("1988-09-17")
-    console.log("ma date de naissance est le : ", birth)
-    var age = new Date(today) - new Date(birth)
-    console.log("mon age est : ", age)
-}
+// function calculateAge() {
+//     var today = new Date()
+    
+//     console.log("Nous sommes le : ", today)
+//     var birth = new Date("1988-09-17")
+//     console.log("ma date de naissance est le : ", birth)
+//     var age = new Date(today) - new Date(birth)
 
-    // var dayBirth = 17
-    // var monthBirth = 09
-    // var yearBirth = 1988 
-    // var age = 
 
-calculateAge()
-console.log("")
-console.log("")
+
+
+
+//     var dayBirth = 17
+//     var monthBirth = 09
+//     var yearBirth = 1988 
+    
+
+
+//     var age = (new Date() - new Date("1988-09-17")) - date.getTime()
+    
+//     console.log("mon age est : ", age)
+// }
+// calculateAge()
+// console.log("")
+// console.log("")
 
 // function calculateAge(date) { 
 //     var today = new Date()
