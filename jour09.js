@@ -72,16 +72,13 @@ console.log("03")
 // - La fonction doit renvoyer la date au format jj/mm/aaaa
 // - Appelez la fonction et affichez son résultat dans la console
 
+const formatDate = (str) => {
+    const today = new Date().toLocaleDateString()
 
-// function formatDate() {
-//     var today = new Date()
-//     var todayFr = today.toLocaleDateString()
- 
-//     console.log("Nous sommes le : ", todayFr)
-// }
+    console.log(today)
+}
 
-// formatDate()
-
+formatDate()
 
 console.log("")
 // ## 04 - Age
@@ -91,6 +88,9 @@ console.log("04")
 // - Créez une fonction `calculateAge` qui reçoit en paramètre une date au format aaaa-mm-jj (qui sert de date de naissance)
 // - La fonction doit calculer l'âge de la personne (en années) née a ce moment là, en fonction de la date d'aujourd'hui
 // - Appelez la fonction et affichez son résultat dans la console
+
+
+
 
 // function calculateAge() {
 //     var today = new Date()
