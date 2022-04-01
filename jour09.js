@@ -33,13 +33,26 @@ console.log("")
 console.log("02")
 
 const whatMonthIsIt = () => {
-    
+    const today = new Date()
+    const month = today.getMonth()
+    const monthArray = ["Janvier", "Février", "Mars", "Avril", "Mai", "Juin", "Juillet", "Aout", "Septembre", "Octobre", "Novembre", "Décembre"]
+
+    switch (monthArray[month]) {
+        case "Avril":
+            console.log(`Nous sommes au mois d'${monthArray[month]}`)
+            break
+        case "Aout":
+            console.log(`Nous sommes au mois d'${monthArray[month]}`)
+            break
+        case "Octobre":
+            console.log(`Nous sommes au mois d'${monthArray[month]}`)
+            break
+        default:
+            console.log(`Nous sommes au mois de ${monthArray[month]}`)
+    }
 }
 
-
-
-
-
+whatMonthIsIt()
 
 // function whatMonthIsIt() {
 //     var today = new Date()
